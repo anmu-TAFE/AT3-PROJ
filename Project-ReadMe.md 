@@ -1,0 +1,30 @@
+# This is the Final Project for Web Technologies 
+
+### The website will contain 6 pages as requested for the assessment:
+- Landing page (index.html) with some general info about me and my projects
+- Contact page will have a contact form
+- About page will have a brief description of myself, my studies and hobbies
+- Project page where will be possible to see the projects done throught the year
+- Mywork will redirect to my previous assessment in Web Technologies
+- Resume will contain my work experiences, education and skills
+
+### Tools and Technologies that are going to be used are:
+- TailwindCSS for styling the webpage and make them responsive
+- Javascript for animation and functionalities
+- API for contact form
+
+### Checklist
+| Task | Status |
+| ---- | ---- |
+| Initial project setup | Done |
+| Version control setup | Done |
+| Wireframe designs | To do |
+| Determine Site color scheme | To do |
+| Use of imagery | To do |
+| Use of HTML and validating | To do |
+| Use of CSS | To do |
+| Use of Javascript and validating| To do |
+| Use of TailwindCSS | To do |
+| Test HTML is displayed as it should in two different browsers | To do |
+| Publish on Github Pages | To do |
+| Compress and submit | To do |
