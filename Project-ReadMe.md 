@@ -12,6 +12,16 @@
 - TailwindCSS for styling the webpage and make them responsive
 - Javascript for animation and functionalities
 - API for contact form
+## Color palette
+| Name     | RGB            | HEX      |
+|----------|----------------|----------|
+| black    | 0, 0, 0        | #000000 |
+| white    | 255, 255, 255  | #FFFFFF |
+| ice blue   | 229, 243, 255  | #E5F3FF |
+| soft blue   | 153, 207, 255  | #99CFFF |
+| electric blue   | 0, 136, 255  | #0088FF |
+| deep blue   | 0, 82, 153  | #005299 |
+| midnight blue   | 0, 19, 36  | #001324 |
 
 ### Checklist
 | Task | Status |
