@@ -1,11 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <script src="./Assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="./Assets/css/site.css">
 </head>
-<body>
-    
+
+<body
+    class="flex min-h-screen flex-col overflow-x-hidden bg-[#E5F3FF] font-sans text-[#001324] antialiased dark:bg-[#001324] dark:text-white">
+    <header class="sticky top-0 z-50 px-3 pt-3 sm:px-6 lg:px-9">
+        <nav
+            class="relative mx-auto grid max-w-7xl grid-cols-3 items-center rounded-2xl border border-white/70 bg-white/65 px-4 py-3 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80">
+            <a href="index.html"
+                class="col-start-1 row-start-1 hidden text-sm font-extrabold tracking-tight lg:block">ANTONIO<br>MUSCERINO</a>
+            <a href="index.html"
+                class="col-start-2 row-start-1 justify-self-center text-xl font-extrabold lg:hidden">A.M.</a>
+
+            <button type="button" data-theme-toggle
+                class="col-start-1 row-start-1 grid size-6 place-items-center rounded-full lg:col-start-3 lg:justify-self-end">
+                <span data-theme-icon></span>
+            </button>
+            <!-- Desktop navigation-->
+            <ul class="col-start-2 row-start-1 hidden items-center justify-center gap-1 lg:flex">
+                <li><a href="index.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF] text-[#005299] underline decoration-[#0088FF] decoration-2 underline-offset-8 dark:text-[#99CFFF]">Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]">About</a>
+                </li>
+                <li><a href="contact.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]">Contact</a>
+                </li>
+                <li>
+                    <details class="relative">
+                        <summary
+                            class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF] cursor-pointer list-none">
+                            Work <span>⌄</span></summary>
+                        <ul
+                            class="absolute right-10 top-full mt-4 w-52 rounded-xl border border-white/70 bg-white/95 p-2 shadow-xl backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/95">
+                            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                    href="resume.html">Resumé</a></li>
+                            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                    href="projects.html">Projects</a></li>
+                            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                    href="mywork.html?project=getmymeal">Featured Project</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+            <!-- Mobile navigation-->
+            <details class="relative col-start-3 row-start-1 justify-self-end lg:hidden">
+                <summary class="grid size-10 cursor-pointer list-none place-items-center rounded-lg text-xl"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        class="fill-current">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></summary>
+                <ul
+                    class="absolute right-0 top-full mt-4 w-56 rounded-xl border border-white/70 bg-white/95 p-2 shadow-xl backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/95">
+                    <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                            href="index.html">Home</a></li>
+                    <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                            href="about.html">About</a></li>
+                    <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                            href="contact.html">Contact</a></li>
+                    <li>
+                        <details>
+                            <summary
+                                class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF] cursor-pointer list-none">
+                                Work <span>⌄</span></summary>
+                            <ul class="ml-3 border-l-2 border-[#99CFFF] pl-2">
+                                <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                        href="resume.html">Resumé</a></li>
+                                <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                        href="projects.html">Projects</a></li>
+                                <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                        href="mywork.html?project=getmymeal">Featured Project</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+    <main id="main-content" class="mx-auto flex w-full max-w-7xl flex-1 flex-col px-3 sm:px-6 lg:px-9">
+        <!-- Title and paragraph -->
+        <section id="about-layout" class="grid grid-rows-[auto_1fr] gap-6 py-10 sm:gap-8 sm:py-8 lg:gap-10 lg:py-10">
+            <header class="text-left">
+                <h1 id="featured-title" class="text-3xl font-bold tracking-tight pb-3 sm:text-4xl">Resume</h1>
+                <a href="Assets/downloads/resume-anmu.pdf" download="Resume-antonio-muscerino.pdf" target="_blank" class="rounded-full border border-white/75 bg-white/85 text-sm font-bold px-4 py-2 text-[#005299] shadow-lg backdrop-blur-md dark:border-[#99CFFF]/30 dark:bg-[#001324]/85 dark:text-white">Download PDF</a>
+            </header>
+            <article
+                class="space-y-7 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                <header class="space-y-2">
+                    <h2 class="text-2xl font-bold sm:text-3xl text-[#0088FF]">
+                        Education
+                    </h2>
+                </header>
+                <ul>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Certificate IV in Information Technology (Programming)
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    TAFE Northmetropolitan, Northbridge, Australia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2025 - Ongoing
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Advanced Diploma in Project Design and Marketing
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    ITS, Recanati, Italia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2020 - 2023
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Diploma in Information and Telecomunication Technology
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    ITIS A.Meucci, Castelfidardo, Italia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2013 - 2018
+                                </p>
+                        </section>
+                    </li>
+                </ul>
+            </article>
+            <article
+                class="space-y-7 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                <header class="space-y-2">
+                    <h2 class="text-2xl font-bold sm:text-3xl text-[#0088FF]">
+                        Experience
+                    </h2>
+                </header>
+                <ul>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Kitchen Steward and Higher Duty
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Crown Resorts, Burswood, Australia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2025 - Ongoing
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    3D Modeller (Furniture Office design using Fusion 360)
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    McLernons Business Base, Welshpool, Australia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2026 - 2026 | Temporary work experience
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Factory Worker (Assembly and Packaging)
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Stahmann Webster, Toowoomba, QLD, Australia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2024 - 2025
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Factory Worker (Assembly and Packaging)
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Visy Board, Reservoir, VIC,  Australia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2023 - 2024
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Marketing Event Specialist
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Rainbow SpA, Recanati,  Italy
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2022 - 2023
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    IT Technician (Internship - Sharepoint, Microsoft 365, Networking)
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Zannini SpA, Cerretano,  Italy
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2021 - 2022
+                                </p>
+                        </section>
+                    </li>
+                </ul>
+            </article>
+            <article
+                class="space-y-7 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                <header class="space-y-2">
+                    <h2 class="text-2xl font-bold sm:text-3xl text-[#0088FF]">
+                        Awards and Certificates
+                    </h2>
+                </header>
+                <ul>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Honorauble Mention for Hardware Hackathon 
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    Curtin University, Bentley, Australia
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2026
+                                </p>
+                        </section>
+                    </li>
+                    <li
+                        class="space-y-1 list-disc list-outside pl-5 mx-5 hover:text-[#0088FF] hover:scale-105 transition-transform">
+                        <section
+                            class="space-y-7 mb-3 rounded-2xl border border-white/70 bg-white/65 p-5 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80 sm:p-7">
+                            <ul class="space-y-2">
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    ECDL - European Computer Driving Licence
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    ITS, Recanati, Italy
+                                </p>
+                                <p class="text-sm leading-relaxed text-[#005299] dark:text-[#99CFFF] sm:text-base">
+                                    2022
+                                </p>
+                        </section>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="mx-auto w-full max-w-7xl grid grid-cols-1 gap-8 border border-white/70 bg-white/70 px-6 py-7 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#99CFFF]/10 md:grid-cols-3 md:items-start">
+        <section class="flex flex-col items-start text-left">
+            <h2><a href="index.html" class="text-sm font-extrabold">ANTONIO MUSCERINO</a></h2>
+            <p class="mt-4 text-xs text-[#005299] dark:text-[#99CFFF]">© 2026 Antonio Muscerino. All rights reserved.
+            </p>
+        </section>
+        <nav class="flex flex-col items-start text-left md:items-center md:text-center">
+            <h2 class="mb-3 text-sm font-bold">Menu</h2>
+            <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm justify-start md:justify-center">
+                <li><a class="hover:text-[#0088FF]" href="index.html">Home</a></li>
+                <li><a class="hover:text-[#0088FF]" href="about.html">About</a></li>
+                <li><a class="hover:text-[#0088FF]" href="contact.html">Contact</a></li>
+                <li><a class="hover:text-[#0088FF]" href="resume.html">Resumé</a></li>
+                <li><a class="hover:text-[#0088FF]" href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        <section class="flex flex-col items-start text-left md:items-end md:text-right">
+            <h2 class="mb-3 text-sm font-bold" id="professional-links">Professional links</h2>
+            <ul class="flex flex-wrap gap-4 text-sm justify-start md:justify-end">
+                <li><a class="hover:text-[#0088FF]" href="https://github.com/anmu-TAFE" target="_blank">GitHub ↗</a>
+                </li>
+                <li><a class="hover:text-[#0088FF]" href="https://components.dev.screencraft.net.au"
+                        target="_blank">Screencraft ↗</a></li>
+            </ul>
+        </section>
+    </footer>
 </body>
+
 </html>
