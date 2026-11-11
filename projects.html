@@ -1,11 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <script src="./Assets/js/script.js" defer></script>
+    <script src="./Assets/js/projects.js" defer></script>
+    <link rel="stylesheet" href="./Assets/css/site.css">
 </head>
-<body>
-    
+
+<body
+    class="flex min-h-screen flex-col overflow-x-hidden bg-[#E5F3FF] font-sans text-[#001324] antialiased dark:bg-[#001324] dark:text-white">
+    <header class="sticky top-0 z-50 px-3 pt-3 sm:px-6 lg:px-9">
+        <nav
+            class="relative mx-auto grid max-w-7xl grid-cols-3 items-center rounded-2xl border border-white/70 bg-white/65 px-4 py-3 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/80">
+            <a href="index.html"
+                class="col-start-1 row-start-1 hidden text-sm font-extrabold tracking-tight lg:block">ANTONIO<br>MUSCERINO</a>
+            <a href="index.html"
+                class="col-start-2 row-start-1 justify-self-center text-xl font-extrabold lg:hidden">A.M.</a>
+
+            <button type="button" data-theme-toggle
+                class="col-start-1 row-start-1 grid size-6 place-items-center rounded-full lg:col-start-3 lg:justify-self-end">
+                <span data-theme-icon></span>
+            </button>
+            <!-- Desktop navigation-->
+            <ul class="col-start-2 row-start-1 hidden items-center justify-center gap-1 lg:flex">
+                <li><a href="index.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF] text-[#005299] underline decoration-[#0088FF] decoration-2 underline-offset-8 dark:text-[#99CFFF]">Home</a>
+                </li>
+                <li><a href="about.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]">About</a>
+                </li>
+                <li><a href="contact.html"
+                        class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]">Contact</a>
+                </li>
+                <li>
+                    <details class="relative">
+                        <summary
+                            class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF] cursor-pointer list-none">
+                            Work <span>⌄</span></summary>
+                        <ul
+                            class="absolute right-10 top-full mt-4 w-52 rounded-xl border border-white/70 bg-white/95 p-2 shadow-xl backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/95">
+                            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                    href="resume.html">Resumé</a></li>
+                            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                    href="projects.html">Projects</a></li>
+                            <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                    href="mywork.html?project=getmymeal">Featured Project</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+            <!-- Mobile navigation-->
+            <details class="relative col-start-3 row-start-1 justify-self-end lg:hidden">
+                <summary class="grid size-10 cursor-pointer list-none place-items-center rounded-lg text-xl"><svg
+                        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        class="fill-current">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></summary>
+                <ul
+                    class="absolute right-0 top-full mt-4 w-56 rounded-xl border border-white/70 bg-white/95 p-2 shadow-xl backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#001324]/95">
+                    <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                            href="index.html">Home</a></li>
+                    <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                            href="about.html">About</a></li>
+                    <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                            href="contact.html">Contact</a></li>
+                    <li>
+                        <details>
+                            <summary
+                                class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF] cursor-pointer list-none">
+                                Work <span>⌄</span></summary>
+                            <ul class="ml-3 border-l-2 border-[#99CFFF] pl-2">
+                                <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                        href="resume.html">Resumé</a></li>
+                                <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                        href="projects.html">Projects</a></li>
+                                <li><a class="block rounded-lg px-3 py-2 text-sm font-semibold hover:bg-[#99CFFF]/30 focus-visible:outline-2 focus-visible:outline-[#0088FF]"
+                                        href="mywork.html?project=getmymeal">Featured Project</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </details>
+        </nav>
+    </header>
+    <main id="main-content" class="mx-auto flex w-full max-w-7xl flex-1 flex-col px-3 sm:px-6 lg:px-9">
+        <!-- Title and paragraph -->
+        <section id="about-layout" class="grid grid-rows-[auto_1fr] gap-6 py-10 sm:gap-8 sm:py-8 lg:gap-10 lg:py-10">
+            <header class="text-center">
+                <h1 id="featured-title" class="text-3xl font-bold tracking-tight sm:text-4xl">Projects</h1>
+                <p class="mt-2 text-sm text-[#005299] dark:text-[#99CFFF] sm:text-base">Explore some of my recents
+                    projects
+                    more.</p>
+            </header>
+            <section data-project-gallery>
+                <h2 id="gallery-heading" class="sr-only">Project gallery</h2>
+                <section class="mb-7 flex flex-wrap justify-center gap-2"
+                    data-project-filter>
+                    <button type="button" data-filter="all"
+                        class="rounded-full border border-[#99CFFF]/60 bg-white/70 px-4 py-2 text-sm font-medium transition-colors hover:border-[#0088FF] focus-visible:outline-2 focus-visible:outline-[#0088FF] dark:bg-[#001324]/75">All</button>
+                    <button type="button" data-filter="software"
+                        class="rounded-full border border-[#99CFFF]/60 bg-white/70 px-4 py-2 text-sm font-medium transition-colors hover:border-[#0088FF] focus-visible:outline-2 focus-visible:outline-[#0088FF] dark:bg-[#001324]/75">Software</button>
+                    <button type="button" data-filter="3d" 
+                        class="rounded-full border border-[#99CFFF]/60 bg-white/70 px-4 py-2 text-sm font-medium transition-colors hover:border-[#0088FF] focus-visible:outline-2 focus-visible:outline-[#0088FF] dark:bg-[#001324]/75">3D
+                        Modelling</button>
+                    <button type="button" data-filter="electronics"
+                        class="rounded-full border border-[#99CFFF]/60 bg-white/70 px-4 py-2 text-sm font-medium transition-colors hover:border-[#0088FF] focus-visible:outline-2 focus-visible:outline-[#0088FF] dark:bg-[#001324]/75">Electronics</button>
+                    <button type="button" data-filter="hackathon"
+                        class="rounded-full border border-[#99CFFF]/60 bg-white/70 px-4 py-2 text-sm font-medium transition-colors hover:border-[#0088FF] focus-visible:outline-2 focus-visible:outline-[#0088FF] dark:bg-[#001324]/75">Hackathon</button>
+                </section>
+                <p class="sr-only" data-filter-status>Showing all projects</p>
+                <ul class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7" data-project-list>
+                    <li data-category="software" class="min-w-0">
+                        <article
+                            class="group h-full overflow-hidden rounded-2xl border border-white/70 bg-white/65 p-2 shadow-lg backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 dark:border-[#99CFFF]/25 dark:bg-[#99CFFF]/10">
+                            <a href="mywork.html?project=getmymeal"
+                                class="block h-full rounded-xl focus-visible:outline-2 focus-visible:outline-[#0088FF]">
+                                <figure>
+                                    <img data-project-image src="Assets/img/GetMyMealLight.png"
+                                        alt="MAUI application - GetMyMeal" loading="lazy" width="600" height="450"
+                                        class="aspect-[4/3] w-full rounded-xl object-cover bg-[#99CFFF]/30">
+                                    <figcaption class="flex items-center justify-between gap-3 px-3 py-4">
+                                        <span class="min-w-0">
+                                            <strong
+                                                class="block truncate text-base font-semibold sm:text-lg">GetMyMeal</strong>
+                                            <small
+                                                class="mt-1 block text-[#005299] dark:text-[#99CFFF]">Software</small>
+                                        </span>
+                                        <span
+                                            class="grid size-9 shrink-0 place-items-center rounded-full bg-[#E5F3FF] text-[#005299] dark:bg-[#005299] dark:text-white">↗</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li data-category="3d" class="min-w-0">
+                        <article
+                            class="group h-full overflow-hidden rounded-2xl border border-white/70 bg-white/65 p-2 shadow-lg backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 dark:border-[#99CFFF]/25 dark:bg-[#99CFFF]/10">
+                            <a href="mywork.html?project=parametric-furniture"
+                                class="block h-full rounded-xl focus-visible:outline-2 focus-visible:outline-[#0088FF]">
+                                <figure>
+                                    <img data-project-image src="Assets/img/sienna-isometric.png"
+                                        alt="3D modelling - Parametric Furniture" loading="lazy" width="600"
+                                        height="450"
+                                        class="aspect-[4/3] w-full rounded-xl object-cover bg-[#99CFFF]/30">
+                                    <figcaption class="flex items-center justify-between gap-3 px-3 py-4">
+                                        <span class="min-w-0">
+                                            <strong class="block truncate text-base font-semibold sm:text-lg">Parametric
+                                                Furniture</strong>
+                                            <small class="mt-1 block text-[#005299] dark:text-[#99CFFF]">3D
+                                                Modelling</small>
+                                        </span>
+                                        <span
+                                            class="grid size-9 shrink-0 place-items-center rounded-full bg-[#E5F3FF] text-[#005299] dark:bg-[#005299] dark:text-white">↗</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li data-category="electronics" class="min-w-0">
+                        <article
+                            class="group h-full overflow-hidden rounded-2xl border border-white/70 bg-white/65 p-2 shadow-lg backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 dark:border-[#99CFFF]/25 dark:bg-[#99CFFF]/10">
+                            <a href="mywork.html?project=esp32-door-sensor"
+                                class="block h-full rounded-xl focus-visible:outline-2 focus-visible:outline-[#0088FF]">
+                                <figure>
+                                    <img data-project-image src="Assets/img/mandy_exploded.PNG"
+                                        alt="Electronics - ESP32 Project" loading="lazy" width="600"
+                                        height="450"
+                                        class="aspect-[4/3] w-full rounded-xl object-cover bg-[#99CFFF]/30">
+                                    <figcaption class="flex items-center justify-between gap-3 px-3 py-4">
+                                        <span class="min-w-0">
+                                            <strong class="block truncate text-base font-semibold sm:text-lg">ESP32
+                                                Project</strong>
+                                            <small
+                                                class="mt-1 block text-[#005299] dark:text-[#99CFFF]">Electronics</small>
+                                        </span>
+                                        <span
+                                            class="grid size-9 shrink-0 place-items-center rounded-full bg-[#E5F3FF] text-[#005299] dark:bg-[#005299] dark:text-white">↗</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li data-category="hackathon" class="min-w-0">
+                        <article
+                            class="group h-full overflow-hidden rounded-2xl border border-white/70 bg-white/65 p-2 shadow-lg backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 dark:border-[#99CFFF]/25 dark:bg-[#99CFFF]/10">
+                            <a href="mywork.html?project=hardware-hackathon"
+                                class="block h-full rounded-xl focus-visible:outline-2 focus-visible:outline-[#0088FF]">
+                                <figure>
+                                    <img data-project-image src="Assets/img/mandy_front.png"
+                                        alt="Hardware prototype - Hardware Hackathon" loading="lazy" width="600"
+                                        height="450"
+                                        class="aspect-[4/3] w-full rounded-xl object-cover bg-[#99CFFF]/30">
+                                    <figcaption class="flex items-center justify-between gap-3 px-3 py-4">
+                                        <span class="min-w-0">
+                                            <strong class="block truncate text-base font-semibold sm:text-lg">Hardware
+                                                Hackathon</strong>
+                                            <small
+                                                class="mt-1 block text-[#005299] dark:text-[#99CFFF]">Hackathon</small>
+                                        </span>
+                                        <span
+                                            class="grid size-9 shrink-0 place-items-center rounded-full bg-[#E5F3FF] text-[#005299] dark:bg-[#005299] dark:text-white">↗</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                    <li data-category="software" class="min-w-0">
+                        <article
+                            class="group h-full overflow-hidden rounded-2xl border border-white/70 bg-white/65 p-2 shadow-lg backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 dark:border-[#99CFFF]/25 dark:bg-[#99CFFF]/10">
+                            <a href="mywork.html?project=portfolio-website"
+                                class="block h-full rounded-xl focus-visible:outline-2 focus-visible:outline-[#0088FF]">
+                                <figure>
+                                    <img data-project-image src="Assets/img/portfolio-AT2.png"
+                                        alt="Web development - AT2 Website" loading="lazy" width="600"
+                                        height="450"
+                                        class="aspect-[4/3] w-full rounded-xl object-cover bg-[#99CFFF]/30">
+                                    <figcaption class="flex items-center justify-between gap-3 px-3 py-4">
+                                        <span class="min-w-0">
+                                            <strong class="block truncate text-base font-semibold sm:text-lg">Portfolio
+                                                Website</strong>
+                                            <small
+                                                class="mt-1 block text-[#005299] dark:text-[#99CFFF]">Software</small>
+                                        </span>
+                                        <span
+                                            class="grid size-9 shrink-0 place-items-center rounded-full bg-[#E5F3FF] text-[#005299] dark:bg-[#005299] dark:text-white">↗</span>
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer
+        class="mx-auto w-full max-w-7xl grid grid-cols-1 gap-8 border border-white/70 bg-white/70 px-6 py-7 shadow-lg backdrop-blur-xl dark:border-[#99CFFF]/25 dark:bg-[#99CFFF]/10 md:grid-cols-3 md:items-start">
+        <section class="flex flex-col items-start text-left">
+            <h2><a href="index.html" class="text-sm font-extrabold">ANTONIO MUSCERINO</a></h2>
+            <p class="mt-4 text-xs text-[#005299] dark:text-[#99CFFF]">© 2026 Antonio Muscerino. All rights reserved.
+            </p>
+        </section>
+        <nav class="flex flex-col items-start text-left md:items-center md:text-center">
+            <h2 class="mb-3 text-sm font-bold">Menu</h2>
+            <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm justify-start md:justify-center">
+                <li><a class="hover:text-[#0088FF]" href="index.html">Home</a></li>
+                <li><a class="hover:text-[#0088FF]" href="about.html">About</a></li>
+                <li><a class="hover:text-[#0088FF]" href="contact.html">Contact</a></li>
+                <li><a class="hover:text-[#0088FF]" href="resume.html">Resumé</a></li>
+                <li><a class="hover:text-[#0088FF]" href="projects.html">Projects</a></li>
+            </ul>
+        </nav>
+        <section class="flex flex-col items-start text-left md:items-end md:text-right">
+            <h2 class="mb-3 text-sm font-bold" id="professional-links">Professional links</h2>
+            <ul class="flex flex-wrap gap-4 text-sm justify-start md:justify-end">
+                <li><a class="hover:text-[#0088FF]" href="https://github.com/anmu-TAFE" target="_blank">GitHub ↗</a>
+                </li>
+                <li><a class="hover:text-[#0088FF]" href="https://components.dev.screencraft.net.au"
+                        target="_blank">Screencraft ↗</a></li>
+            </ul>
+        </section>
+    </footer>
 </body>
 </html>
